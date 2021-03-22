@@ -3,7 +3,8 @@ chrome.extension.sendMessage({}, function (response) {
     if (document.readyState === "complete") {
       clearInterval(readyStateCheckInterval);
 
-      var css = ".has_nicotine .prdc__img { filter: none; }",
+      var css =
+          ".has_nicotine .prdc__img { filter: none; } .menu__extra-product-item.has_nicotine img { filter: none; }",
         head = document.head || document.getElementsByTagName("head")[0],
         style = document.createElement("style");
 
