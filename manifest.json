@@ -1,0 +1,19 @@
+{
+  "name": "Неразмытый zenmod.ru",
+  "version": "0.1.0",
+  "manifest_version": 2,
+  "description": "Убираем размытие с фото жидкостей.",
+  "homepage_url": "https://github.com/creamdonut",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["tabs"],
+  "content_scripts": [
+    {
+      "matches": ["https://*.zenmod.ru/*"],
+      "js": ["src/inject/inject.js"]
+    }
+  ]
+}
